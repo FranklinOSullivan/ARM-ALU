@@ -22,6 +22,7 @@ begin
             when "100" => O_Result <= B - B; -- Subtration
             when others => O_Result <= '0'; -- Default
         end case;
-        
+
+        O_Zero <= '1' when O_Result = '0' else '0'; -- Output 0
     end process;
 end Behaviour;
