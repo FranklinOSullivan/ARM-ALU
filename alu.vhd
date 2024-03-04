@@ -15,6 +15,9 @@ begin
     process (I_OP)
     begin   
         case I_OP is
+            when "000" => O_Result <= A and B; -- AND
+            when "001" => O_Result <= A or B; -- OR
+            when "010" => O_Result <= A xor B; -- XOR
         end case;
     end process;
 end Behaviour;
