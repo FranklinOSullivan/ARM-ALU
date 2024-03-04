@@ -18,6 +18,10 @@ begin
             when "000" => O_Result <= A and B; -- AND
             when "001" => O_Result <= A or B; -- OR
             when "010" => O_Result <= A xor B; -- XOR
+            when "011" => O_Result <= A + B; -- Addition
+            when "100" => O_Result <= B - B; -- Subtration
+            when others => O_Result <= '0'; -- Default
         end case;
+        
     end process;
 end Behaviour;
